@@ -30,10 +30,10 @@ public class ServicePixPayment {
 
       MPRequestOptions requestOptions = MPRequestOptions.builder()
           .customHeaders(customHeaders)
-          .accessToken("APP_USR-5879859661431869-050816-63fe2574c50c3369bae624b038a5c0c4-1259153998")
+          .accessToken("TEST-8413389041892698-051413-ffbe957b1291cbb43fb563e3322f804d-1810855223")
           .build();
 
-      MercadoPagoConfig.setAccessToken("APP_USR-5879859661431869-050816-63fe2574c50c3369bae624b038a5c0c4-1259153998");
+      MercadoPagoConfig.setAccessToken("TEST-8413389041892698-051413-ffbe957b1291cbb43fb563e3322f804d-1810855223");
 
       PaymentClient client = new PaymentClient();
 
