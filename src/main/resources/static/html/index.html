@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script src="/static/js/index.js"></script>
+</head>
+<body>
+<form id="form-checkout">
+    <div>
+        <div>
+            <label for="form-checkout__payerFirstName">Nombre</label>
+            <input id="form-checkout__payerFirstName" name="payerFirstName" type="text">
+        </div>
+        <div>
+            <label for="form-checkout__payerLastName">Sobrenome</label>
+            <input id="form-checkout__payerLastName" name="payerLastName" type="text">
+        </div>
+        <div>
+            <label for="form-checkout__email">E-mail</label>
+            <input id="form-checkout__email" name="email" type="email">
+        </div>
+        <div>
+            <label for="form-checkout__identificationType">Tipo de documento</label>
+            <select id="form-checkout__identificationType" name="identificationType"></select>
+        </div>
+        <div>
+            <label for="form-checkout__identificationNumber">Número do documento</label>
+            <input id="form-checkout__identificationNumber" name="identificationNumber" type="text">
+        </div>
+    </div>
+
+    <div>
+        <input type="hidden" name="transactionAmount" id="transactionAmount" value="100">
+        <input type="hidden" name="description" id="description" value="Nombre del Producto">
+        <button type="submit" id="btPayment">Pagar</button>
+    </div>
+</form>
+
+<div id="payment-result" style="display:none;">
+    <h2>Pagamento com Pix</h2>
+    <a id="pix-link" href="" target="_blank">Pagar com Pix</a>
+    <h2>Ou escaneie o QR Code abaixo:</h2>
+    <img id="qr-code-image" src="" alt="QR Code para pagamento com Pix"/>
+    <h2>Ou copie o código abaixo:</h2>
+    <label for="copiar">Copiar Hash:</label>
+    <input type="text" id="copiar" value="" readonly/>
+</div>
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+</body>
+</html>
